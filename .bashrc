@@ -119,3 +119,6 @@ alias gdb="gdb -q"
 
 #Sublime Text
 alias sublime_text="$HOME/su2/sublime_text"
+
+#Include dotfiles in pathname expansions
+shopt -s dotglob
