@@ -122,3 +122,9 @@ alias sublime_text="$HOME/su2/sublime_text"
 
 #Include dotfiles in pathname expansions
 shopt -s dotglob
+
+#cd to directories if attempting to execute them
+shopt -s autocd
+
+#extended globbing
+shopt -s extglob
