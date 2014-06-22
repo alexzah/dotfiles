@@ -1,0 +1,12 @@
+set bell-style audible
+set completion-ignore-case on
+set completion-map-case on
+set completion-query-items 50
+set editing-mode emacs
+set expand-tilde off
+set mark-directories on
+set match-hidden-files off
+set page-completions on
+set print-completions-horizontally off
+set show-all-if-unmodified on
+set skip-completed-text on
