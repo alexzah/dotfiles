@@ -45,8 +45,20 @@
 (setq-default tab-width 4)
 (setq tab-width 4)
 (setq-default c-basic-offset 4)
+(defun linum-format-func (line)
+  (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
+     (propertize (format (format "%%%dd " w) line) 'face 'linum)))
+(setq linum-format 'linum-format-func)
 ;;Don't want to type 'yes' and 'no'
 (defalias 'yes-or-no-p 'y-or-n-p)
+;;Smooth Scrolling
+   (setq scroll-step 1)
+    (setq scroll-conservatively 10000)
+    (setq auto-window-vscroll nil)
+(setq make-backup-files nil) ; stop creating those backup~ files
+(setq auto-save-default nil) ; stop creating those #autosave# files
+;;
+;;
 ;; Rmail: We will place all Mail's an Mail-folders into ~/Mail
 ;; -----------------------------------------------------------
 (if (file-accessible-directory-p "~/Mail/")
@@ -75,6 +87,7 @@
      (if (stringp tmpf)
 	 (setq mail-host-address tmpf)))
      (setq tmpf nil tmph nil))
+
 ;;
 ;; RMAILGEN: Folder im Rmail-Mode :-)
 ;; ----------------------------------
